@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostel Tracker System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="fonts-6/css/all.css" /> -->
+    <!-- <link rel="stylesheet" href="bt-5/css/bootstrap.min.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS CSS - CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- CODE STARTS HERE -->
+
+    
+
+    <div class="container">
+      <setion class="banner">
+         <!--? NAVBAR SECTION START(TEAM INFO) -->
+      <nav>
+        <div class="dropdown text-end">
+          <img
+            src="img/customer-service.png"
+            alt="project logo"
+            class="dropdown-toggle rounded-circle me-3 bg-primary mx-3 bottom-0 position-fixed m-3 mb-5 p-2"
+            style="height: 7rem; width: 7rem; cursor: pointer"
+            id="dropdownMenuButton2"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          />
+          <span class="bottom-0 position-fixed me-5 fs-3 text-light">Need Help?</span>
+          <ul
+            class="dropdown-menu dropdown-menu-dark"
+            aria-labelledby="dropdownMenuButton2"
+          >
+            <li>
+              <a class="dropdown-item" href="https://github.com/Sonnysam/"
+                >Sonny</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/codewithkevin"
+                >Kevin</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/samtuga1"
+                >Sammy Tuga</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/J-Bishopp"
+                >Bishop</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!--! NAVBAR SECTION END (TEAM INFO) -->
+
+      
+
+      <!-- ?HERO SECTION START(TEAM INFO) -->
+      <section class="hero">
+        <h1 class="display-1 text-light fw-bolder text-center mt-5">
+          <img src="img/ug.png" class="ug" style="height: 250px; width: 250px;"> <br> Welcome to <span class="type"></span>
+        </h1>
+        <div class="d-grid gap-2 col-6 mx-auto mt-2">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-outline-primary btn-lg mt-2 p-2 fs-3"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Make Complaint
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header text-center">
+                  <h5
+                    class="modal-title display-3 m-auto text-success"
+                    id="exampleModalLabel"
+                  >
+                    Complaint Form
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- ?========FORM SECTION ============-->
+
+                  <form action="POST" data-netlify="true" class="fs-3" onsubmit="signUp(event)">
+                    <div class="mb-2 text-center"> Required <span class="req">*</span></div>
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Name <span class="req">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mb-2"
+                        placeholder="Enter your name"
+                        required
+                        id="user-name"
+                      />
+                      <span id="required-name" class="fs-3 text-danger p-1"></span>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Student ID <span class="req">*</span></label
+                      >
+                      <input
+                        type="number"
+                        class="form-control mb-2"
+                        placeholder="Enter your ID"
+                        required
+                        id="studentID"
+                      />
+                      <span id="required-id" class="fs-3  text-danger p-1"></span>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Room Number <span class="req">*</span></label
+                      >
+                      <input
+                        type="number"
+                        class="form-control mb-2"
+                        placeholder="Enter your room Number (Eg: 2087)"
+                        required
+                        id="roomNumber"
+                      />
+                      <span id="required-room" class="fs-3  text-danger p-1"></span>
+                      <span id="correct-room" class="fs-3  text-success p-1"></span>
+                    </div>
+                    <div>
+                      <label class="form-label">Email</label>
+                      <input
+                       type="text" 
+                       class="form-control"
+                       id="email" 
+                       required
+                       placeholder="example@st.ug.edu.gh"
+                       />
+                      <div class="form-text fs-6">
+                        We'll never share your email with anyone else
+                      </div>
+                      <input type="checkbox" class="mb-3" /> Remember Me
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" id="complaint">
+                        >Problem Type</label
+                      >
+                      <select
+                        class="form-select form-select-lg mb-2"
+                        aria-label="Default select example"
+                        required
+                      >
+                        <option selected>Select the problem type</option>
+                        <option value="1">Electrical</option>
+                        <option value="2">Capentery</option>
+                        <option value="3">Plumbering</option>
+                      </select>
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <span class="input-group-text"
+                        >Briefly describe fault</span
+                      >
+                      <textarea
+                        class="form-control"
+                        aria-label="Briefly describe fault"
+                        id="description"
+                        required
+                      ></textarea>
+                    </div>
+                    <label class="form-label fs-5"
+                      >Upload any media (of fault) if available</label
+                    >
+                    <input
+                      class="pb-3"
+                      type="file"
+                      name="myfile"
+                      id="myfile"
+                      placeholder="Upload File"
+                    />
+
+                    <!--Recaptcha Field-->
+
+                    <div class="field">
+                      <div data-netlify-recaptcha="true"></div>
+                    </div>
+                  </form>
+
+                  <!-- ?========FORM SECTION END=========-->
+                </div>
+                <div class="modal-footer">
+                  <!-- <a href="#"><button type="submit" class="submit-btn" id="sub-btn"> Submit</button></a> -->
+                  <a href="success.html"><button type="submit" class="comp-btn" id="submit">Submit</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! HERO SECTION END(TEAM INFO) -->
+      </setion>
+      <!-- <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et laborum odio reiciendis nihil ratione natus laudantium aliquam eaque aliquid, numquam, perspiciatis minima pariatur repudiandae itaque dignissimos nam commodi quisquam, dolorum quo doloribus. Ipsum optio tenetur ipsam minus laudantium provident rem atque, ab nesciunt eum deleniti est maiores, fuga et, aspernatur tempore officiis molestiae dolorem doloremque? Rerum vitae totam expedita, quae delectus tempora suscipit enim odio ullam ipsum vel laboriosam iusto animi corporis, sequi consequatur possimus officiis non unde assumenda culpa illo doloremque tenetur? Eius quasi natus, aspernatur at tempore aperiam beatae reprehenderit earum ut accusamus? Tenetur, alias similique. Repudiandae?</h2> -->
+     
+    </div>
+
+    <!-- !ADD JAVASCRIPT TO FORM AND FIELDS -->
+
+    <!-- ?==================== JAVASCRIPT LINKS SECTION ==================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+
+    <!-- TYPEWRITER [CDN.js] -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="bt-5/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS - CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- INITIALIZE AOS  -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- EXTERNAL JS -->
+    <script src="script.js"></script>
+   
+
+  </body>
+</html>

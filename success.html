@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="fonts-6/css/all.css" /> -->
+    <!-- <link rel="stylesheet" href="bt-5/css/bootstrap.min.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- AOS CSS - CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <style>
+    section.success {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+
+    /* LOADER ANIMATION CSS */
+    /* #loader{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+  z-index: 1;
+  overflow: visible;
+	background: #fff url('img/loader.gif') no-repeat center center;
+} */
+    .loader {
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+    .content {
+      display: none;
+    }
+  </style>
+  <body>
+    <!-- ? =========== LOADER ANIMATION CSS ============== -->
+    <div id="loader" class="loader">
+      <img src="img/loader.gif" alt="" />
+    </div>
+
+    <div id="content" class="content">
+      <a href="index.html">
+        <i
+          class="fa-solid fa-arrow-left m-4 fs-2 text-primary"
+          style="cursor: pointer"
+        ></i
+      ></a>
+
+      <h1 class="text-center fs-2 text-primary">
+        Your Complaint Has Been Received Successfully
+      </h1>
+      <p class="text-muted fs-5 text-center">We'll get back to you soon</p>
+
+      <section class="success">
+        <img src="img/success.gif" style="height: 350px; width: 350px" />
+      </section>
+    </div>
+
+    <!-- ?==================== JAVASCRIPT LINKS SECTION ==================== -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- TYPEWRITER [CDN.js] -->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="bt-5/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS - CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- INITIALIZE AOS  -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- ?==================== EXTERNAL JAVASCRIPT FILE ==================== -->
+    <script src="script.js"></script>
+
+
+    <!-- ?==================== LOADER JS SCRIPT ==================== -->
+    <script>
+      setTimeout(function () {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 3000);
+    </script>
+  </body>
+</html>

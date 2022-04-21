@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,900&display=swap");
+
+:root {
+  --color: #ff6734;
+  --white: #fff;
+  --black: #1c2b2d;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+  --twitter: hsl(207, 93%, 46%);
+  --fb: hsl(221, 89%, 41%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  box-shadow: none !important;
+}
+html {
+  font-size: 10px;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+img {
+  width: 100%;
+}
+body{
+  background: url(img/Background.jpg) no-repeat center fixed;
+  background-size: cover;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+/* ?=== ACTUAL CSS CODE STARTS HERE === */
+img.ug{
+  margin-top: -12rem;
+}
+button.btn.btn-outline-primary.btn-lg.mt-2.p-2.fs-3 {
+  color:  white;
+}
+img#dropdownMenuButton2 {
+    margin-left: 2rem;
+}
+span.type{
+  color: rgb(96, 176, 244);
+  font-size: 5rem;
+}
+span.req{
+  color: red;
+}
+.hero{
+  margin-top: 20rem;
+} 
+button.btn-close {
+    font-size: 1.7rem;
+}
+button.submit-btn {
+    padding: 1rem 2rem;
+    border: 1px solid rgb(96, 176, 244);
+    background: none;
+    border-color: rgb(96, 176, 244);
+    border-radius: 33px;
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
+button.submit-btn:hover {
+    background: rgb(96, 176, 244);
+    border-color: rgb(96, 176, 244);
+    color: white;
+}
+
+button.comp-btn {
+    padding: 1rem 2rem;
+    border: 1px solid rgb(96, 176, 244);
+    background: none;
+    border-color: rgb(96, 176, 244);
+    border-radius: 33px;
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
+button.comp-btn:hover {
+    background: rgb(96, 176, 244);
+    border-color: rgb(96, 176, 244);
+    color: white;
+}
+input#user-name{
+    padding: 1.2rem;
+    font-size: 1.3rem;
+}
+input#studentID{
+    padding: 1.2rem;
+    font-size: 1.3rem;
+}
+input#roomNumber{
+    padding: 1.2rem;
+    font-size: 1.3rem;
+}
+input#email{
+    padding: 1.2rem;
+    font-size: 1.3rem;
+}
+select#problemType {
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+
+/* ?======================== MEDIA QUERIES SECTION ======================== */
+@media screen  and (max-width: 768px){
+  span.type{
+  color: rgb(96, 176, 244);
+  font-size: 2rem;
+}
+h1.display-1.text-light.fw-bolder.text-center.mt-5 {
+  font-size: 2rem;
+}
+span.bottom-0.position-fixed.me-5.fs-3.text-light {
+    display: none;
+}
+img#dropdownMenuButton2 {
+  right: 1rem;
+}
+}
