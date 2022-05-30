@@ -71,6 +71,8 @@ roomNumber.addEventListener("input", () => {
     }
  });
 
+//  JS CODE FOR SUBMIT BUTTON
+
  submit.addEventListener("click", (e) => {
     e.preventDefault();
     if(studentid.value === "" || user.value === "" || roomNumber.value === ""){
