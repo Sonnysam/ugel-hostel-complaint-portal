@@ -107,6 +107,14 @@ select#problemType {
     padding: 1rem;
     font-size: 1.3rem;
 }
+.compButton{
+  margin-top: 2rem;
+}
+/* button.compButton.btn.btn-outline-primary.btn-lg.mt-2.p-2.fs-3 {
+  background: #FF6201;
+  color: white;
+  border-color: #FF6201;
+} */
 
 
 /* ?======================== MEDIA QUERIES SECTION ======================== */

@@ -1,6 +1,6 @@
 //JQUERY TYPING ANIMATION JS CODE
 const typed = new Typed(".type", {
-  strings: [" ", "UGEL", "Our Complaint Portal"],
+  strings: [" ", "Limann Hall", "Our Complaint Portal"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
